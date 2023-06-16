@@ -1,14 +1,17 @@
 package org.example.model;
 
-import org.example.people.Staff;
+import org.example.enums.Roles;
 
 public class Courses {
     private String CourseName;
-    private Staff courseTeacher;
+    private Roles courseTeacher;
 
-    public Courses(String courseName, Staff courseTeacher) {
+    public Courses(String courseName, Roles courseTeacher) {
         CourseName = courseName;
         this.courseTeacher = courseTeacher;
+    }
+
+    public Courses() {
     }
 
     public String getCourseName() {
@@ -19,19 +22,19 @@ public class Courses {
         CourseName = courseName;
     }
 
-    public Staff getCourseTeacher() {
+    public Roles getCourseTeacher() {
         return courseTeacher;
     }
 
-    public void setCourseTeacher(Staff courseTeacher) {
+    public void setCourseTeacher(Roles courseTeacher) {
         this.courseTeacher = courseTeacher;
     }
 
     @Override
     public String toString() {
         return "Courses{" +
-                "CourseName = '" + CourseName + '\'' +
-                ", courseTeacher = " + courseTeacher +
+                "CourseName='" + CourseName + '\'' +
+                ", courseTeacher=" + courseTeacher +
                 '}';
     }
 }

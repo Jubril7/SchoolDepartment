@@ -6,12 +6,15 @@ import org.example.enums.Gender;
 
 
 // Fix Date format asap
+// remove dob
 public class Persons {
     private String firstName;
     private String lastName;
     private String otherName;
     private String dob;
     private Gender gender;
+    public Persons(){
+    }
 
     public Persons(String firstName, String lastName, String otherName, String dob, Gender gender) {
         this.firstName = firstName;

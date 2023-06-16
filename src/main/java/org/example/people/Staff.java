@@ -10,6 +10,8 @@ public class Staff extends Persons {
         super(firstName, lastName, otherName, dob, gender);
         this.role = role;
     }
+    public Staff(){
+    }
 
     public Roles getRole() {
         return role;
