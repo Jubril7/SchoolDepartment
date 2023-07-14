@@ -4,15 +4,23 @@ import org.example.people.Applicants;
 import org.example.people.Staff;
 import org.example.people.Student;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class School {
-    private final String schoolName = "";
+    private final String schoolName = "Arsenal International";
 
-    private List<Staff> staffList;
-    private List<Student> studentList;
-    private List<Courses> coursesList;
-    private List<Applicants> applicantsList;
+    private int admissionAgeRequired = 13;
+    public int numberOfStrikesAllowed = 3;
+
+    public School() {
+    }
+    
+    private  List<Staff> staffList = new ArrayList<Staff>();
+    private List<Student> studentList = new ArrayList<Student>();
+    private List<Courses> coursesList = new ArrayList<Courses>();
+    private List<Applicants> applicantsList = new ArrayList<Applicants>();
+
 
     public School(List<Staff> staffList, List<Student> studentList,
                   List<Courses> coursesList, List<Applicants> applicantsList) {
@@ -22,40 +30,41 @@ public class School {
         this.applicantsList = applicantsList;
     }
 
-    public String getSchoolName() {
-        return schoolName;
-    }
 
     public List<Staff> getStaffList() {
         return staffList;
     }
 
-    public void setStaffList(List<Staff> staffList) {
-        this.staffList = staffList;
+    public void setStaffList(Staff staff) {
+        staffList.add(staff);
     }
 
     public List<Student> getStudentList() {
         return studentList;
     }
 
-    public void setStudentList(List<Student> studentList) {
-        this.studentList = studentList;
+    public void setStudentList(Student student) {
+        studentList.add(student);
     }
 
     public List<Courses> getCoursesList() {
         return coursesList;
     }
 
-    public void setCoursesList(List<Courses> coursesList) {
-        this.coursesList = coursesList;
+    public void setCoursesList(Courses courses) {
+        coursesList.add(courses);
     }
 
     public List<Applicants> getApplicantsList() {
         return applicantsList;
     }
 
-    public void setApplicantsList(List<Applicants> applicantsList) {
-        this.applicantsList = applicantsList;
+    public void setApplicantsList(Applicants applicants) {
+        applicantsList.add(applicants);
+    }
+
+    public int getAdmissionAgeRequired() {
+        return admissionAgeRequired;
     }
 
     @Override
